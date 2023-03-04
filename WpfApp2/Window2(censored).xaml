@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApp2.Window2_censored_"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Window2_censored_" Height="450" Width="800">
+    <Grid>
+        <Label Content="Невышедшие/В разработке" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Margin="224,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="350" VerticalAlignment="Top" Width="270" Margin="10,42,0,0"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="357" Margin="358,57,0,0"/>
+        <Label Content="Место под информацию" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="333,121,0,0" FontSize="36"/>
+        <Label Content="Место под информацию" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="333,184,0,0" FontSize="36"/>
+        <Label Content="Место под информацию" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="333,242,0,0" FontSize="36"/>
+        <Button Content="На главную" HorizontalAlignment="Left" Height="34" Margin="358,376,0,0" VerticalAlignment="Top" Width="147"/>
+        <Button Content="След." HorizontalAlignment="Left" Height="34" Margin="637,376,0,0" VerticalAlignment="Top" Width="147"/>
+
+    </Grid>
+</Window>

@@ -4,15 +4,58 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
+        xmlns:properties="clr-namespace:WpfApp2.Properties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="600">
-    <Grid>
-        <Button Content="Игры" HorizontalAlignment="Left" Height="60" Margin="54,76,0,0" VerticalAlignment="Top" Width="139" Click="Button_Click"/>
-        <Button Content="Steam" HorizontalAlignment="Left" Height="60" Margin="391,76,0,0" VerticalAlignment="Top" Width="139"/>
-        <Button Content="Разработанные девайсы" HorizontalAlignment="Left" Height="60" Margin="54,196,0,0" VerticalAlignment="Top" Width="139"/>
-        <Button Content="Valve Corporation" HorizontalAlignment="Left" Height="60" Margin="391,196,0,0" VerticalAlignment="Top" Width="139"/>
-        <Label Content="Valve" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="258,10,0,0" FontSize="24"/>
-        <MediaElement HorizontalAlignment="Left" Height="224" VerticalAlignment="Top" Width="476" Margin="54,292,0,0"/>
+        Title="MainWindow" Height="714" Width="1519" 
+        WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" Background="White" Activated="Window_Activated"
+        >
 
+    <Window.Resources>
+        <BitmapImage x:Key="Image1" UriSource="Media\Main_Background1.jpg"/>
+        <BitmapImage x:Key="Image2" UriSource="Media\Main_Background2.jpg"/>
+        
+        
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource ButtonControl}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+
+
+    <Grid Style="{DynamicResource GridStyle}">
+        <Button x:Name="playButton" Content="Игры" HorizontalAlignment="Left" Height="100" Margin="54,574,0,0" VerticalAlignment="Top" Width="300" FontSize="30"
+                 Style="{DynamicResource ButtonStyle1}" FontFamily="Arial" MouseEnter="PlayButton_MouseEnter" Click="playButton_Click"
+                
+                />
+        <Label Content="Valve" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="684,10,0,0" FontSize="64" Foreground="#FFF9FF77" Background="{x:Null}" FontFamily="Trebuchet MS" FontWeight="Bold" >
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="10" Direction="300"/>
+            </Label.Effect>
+        </Label>
+        <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="432" VerticalAlignment="Top" Width="765" Margin="54,95,0,0"  LoadedBehavior="Manual" />
+        <Button x:Name="steamButton"  Content="Steam" HorizontalAlignment="Left" Height="100" Margin="397,574,0,0" VerticalAlignment="Top" Width="300" FontSize="30"
+            Style="{DynamicResource ButtonStyle1}" FontFamily="Arial" Click="steamButton_Click" MouseEnter="steamButton_MouseEnter"
+                
+                />
+          
+
+
+        <Button x:Name="deviceButton" Content="Девайсы" HorizontalAlignment="Left" Height="100" Margin="833,574,0,0" VerticalAlignment="Top" Width="300" FontSize="30"
+           Style="{DynamicResource ButtonStyle1}" FontFamily="Arial" Click="deviceButton_Click" MouseEnter="deviceButton_MouseEnter"
+                
+                />
+        <Button x:Name="companyButton" Content="Компания" HorizontalAlignment="Left" Height="100" Margin="1164,574,0,0" VerticalAlignment="Top" Width="300" FontSize="30"
+            Style="{DynamicResource ButtonStyle1}" Foreground="Black" FontFamily="Arial" BorderBrush="{x:Null}" Click="companyButton_Click" MouseEnter="companyButton_MouseEnter"
+                
+                />
+        
+        <RadioButton Content="Day_Mode" IsChecked="True" Checked="RadioButton_Checked" Margin="566,58,856.8,605"/>
+        <RadioButton Content="Night_Mode" Checked="RadioButton_Checked" Margin="876,52,521.8,605"/>
     </Grid>
 </Window>

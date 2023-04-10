@@ -5,26 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="Window2_Story_" Height="450" Width="800">
-    <Grid>
-        <Image HorizontalAlignment="Left" Height="337" VerticalAlignment="Top" Width="224" Margin="548,62,0,0" SnapsToDevicePixels="True">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="047fee8f5a205fa22489029fd6c0ee39.jpg" Stretch="Uniform"/>
-            </Image.OpacityMask>
+        Title="Window2_Story_" Height="714" Width="1519" WindowStyle="None"
+        Closed="Window_Closed" PreviewKeyDown="Window_PreviewKeyDown" Background="White" 
+        >
+    <Grid Style="{DynamicResource GridStyle}">
+        <Image x:Name="imagebox" HorizontalAlignment="Left" Height="556" VerticalAlignment="Top" Width="425" Margin="1055,96,0,0" SnapsToDevicePixels="True">
+
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Label Content="Cюжетные проекты" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Margin="274,10,0,0"/>
-        <Label Content="Тут название игры " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="591,30,0,0" FontSize="16"/>
-        <Button Content="&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="49" Margin="537,37,0,0"/>
-        <Button Content="&gt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="49" Margin="741,37,0,0"/>
-        <Label Content="Место под описание игры и т.д." HorizontalAlignment="Left" Margin="0,96,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <Label Content="Место под описание игры и т.д." HorizontalAlignment="Left" Margin="0,154,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <Label Content="Место под описание игры и т.д." HorizontalAlignment="Left" Margin="0,212,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <Label Content="Место под описание игры и т.д." HorizontalAlignment="Left" Margin="0,270,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <Button Content="На главную " HorizontalAlignment="Left" Height="35" Margin="10,376,0,0" VerticalAlignment="Top" Width="171" Click="Button_Click"/>
-        <Button Content="Следующий окно" HorizontalAlignment="Left" Height="35" Margin="197,375,0,0" VerticalAlignment="Top" Width="171" Click="Button_Click"/>
+        <Label Content="Cюжетные проекты" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="614,10,0,0" Background="#FF74FFEE" OpacityMask="Black"/>
+        <Button x:Name="return_Button" Style="{DynamicResource ButtonStyle1}" Content="Назад" HorizontalAlignment="Left" Height="59" Margin="569,615,0,0" VerticalAlignment="Top" Width="431" Click="returnButton_Click" FontSize="36" Background="#FF74FFEE" OpacityMask="#FFD9FF00"/>
+        <ComboBox x:Name="list" HorizontalAlignment="Left" VerticalAlignment="Top" Width="425" Margin="1055,55,0,0" Height="36" SelectionChanged="ComboBox_SelectionChanged"/>
+        <MediaElement x:Name="player" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="852,122,0,0"  LoadedBehavior="Manual" RenderTransformOrigin="1.864,-2.344" />
 
     </Grid>
 </Window>

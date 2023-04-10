@@ -11,6 +11,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Configuration;
+using System.Drawing;
+using Size = System.Drawing.Size;
+using Point = System.Drawing.Point;
+
 
 namespace WpfApp2
 {
@@ -19,9 +24,129 @@ namespace WpfApp2
     /// </summary>
     public partial class Window2_dota_ : Window
     {
+        
         public Window2_dota_()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            this.Loaded += new RoutedEventHandler(MainWindow_Loaded);
+            this.Closing += new System.ComponentModel.CancelEventHandler(MainWindow_Closing);
+
+            if (statistica.fon  == 1)
+            {
+
+                var uri = new Uri(@"DayTheme.xaml", UriKind.Relative);
+                ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+                Application.Current.Resources.Clear();
+                Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+
+            }
+            else
+            {
+                var uri = new Uri(@"NightTheme.xaml", UriKind.Relative);
+                ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+                Application.Current.Resources.Clear();
+                Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+            }
+
+           
+        }
+
+       
+
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (Properties.Settings.Default.WindowLocation != null)
+            {
+                double screenWidth = SystemParameters.PrimaryScreenWidth;
+                double screenHeight = SystemParameters.PrimaryScreenHeight;
+                double windowWidth = this.Width;
+                double windowHeight = this.Height;
+
+                this.Left = (screenWidth / 2) - (windowWidth / 2);
+                this.Top = (screenHeight / 2) - (windowHeight / 2);
+            }
+        }
+
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Properties.Settings.Default.WindowLocation = new Point(10, 20);
+            Properties.Settings.Default.WindowSize = new Size(1519, 714);
+            Properties.Settings.Default.Save();
+        }
+
+        private void returnButton_Click(object sender, RoutedEventArgs e)
+        {
+            statistica.Game++;
+            this.Owner.Show();
+            this.Close();
+        }
+
+        
+
+        private void st_Button_Click(object sender, RoutedEventArgs e)
+        {
+            player.Source = new Uri("Media/st_map_.mp4", UriKind.RelativeOrAbsolute);
+            player.Play();
+        }
+
+        private void wow_Button_Click(object sender, RoutedEventArgs e)
+        {
+            player.Source = new Uri("Media/wow_map.mkv", UriKind.RelativeOrAbsolute);
+            player.Play();
+        }
+
+        private void as_Button_Click(object sender, RoutedEventArgs e)
+        {
+            player.Source = new Uri("Media/as_map_.mkv", UriKind.RelativeOrAbsolute);
+            player.Play();
+        }
+
+        private void dota_Button_Click(object sender, RoutedEventArgs e)
+        {
+            player.Source = new Uri("Media/dota_map_.mkv", UriKind.RelativeOrAbsolute);
+            player.Play();
+        }
+
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.F1:
+                    
+                    HelpPage help = new HelpPage();
+                    help.Owner = this;
+                    help.Show();
+                    break;
+
+                case Key.D1:
+                    player.Source = new Uri("Media/st_map_.mp4", UriKind.RelativeOrAbsolute);
+                    player.Play();
+                    break;
+
+                case Key.D2:
+                    player.Source = new Uri("Media/wow_map.mkv", UriKind.RelativeOrAbsolute);
+                    player.Play();
+                    break;
+
+                case Key.D3:
+                    player.Source = new Uri("Media/as_map_.mkv", UriKind.RelativeOrAbsolute);
+                    player.Play();
+                    break;
+
+                case Key.D4:
+                    player.Source = new Uri("Media/dota_map_.mkv", UriKind.RelativeOrAbsolute);
+                    player.Play();
+                    break;
+
+                case Key.Back:
+                    statistica.Game++;
+                    this.Owner.Show();
+                    this.Close();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

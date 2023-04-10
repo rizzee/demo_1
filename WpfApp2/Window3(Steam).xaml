@@ -5,12 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="Window3_Steam_" Height="450" Width="800">
-    <Grid>
-        <Label Content="STEAM" HorizontalAlignment="Left" Margin="342,10,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <WebBrowser HorizontalAlignment="Left" Height="295" VerticalAlignment="Top" Width="774" Margin="10,70,0,0"/>
-        <Button Content="На главную" HorizontalAlignment="Left" Height="34" Margin="10,376,0,0" VerticalAlignment="Top" Width="147"/>
-        <Button Content="След." HorizontalAlignment="Left" Height="34" Margin="637,376,0,0" VerticalAlignment="Top" Width="147"/>
+        Title="Window3_Steam_" Height="714" Width="1519" WindowStyle="None" PreviewKeyDown="Window_PreviewKeyDown" Background="White"
+       
+        >
+    <Grid Style="{DynamicResource GridStyle}">
+        <Label Content="STEAM" HorizontalAlignment="Left" Margin="697,7,0,0" VerticalAlignment="Top" FontSize="36" Background="#FFFF80F2"/>
+        <Button Content="На главную" Style="{DynamicResource ButtonStyle1}" HorizontalAlignment="Left" Height="58" Margin="576,616,0,0" VerticalAlignment="Top" Width="374" FontSize="36" Background="#FFFF80F2" Click="Button_Click"/>
+
+        <TabControl x:Name="MyTabControl" Margin="512,99,-0.2,154.2" >
+            <TabItem Header="Движок" RenderTransformOrigin="0.5,0.509">
+                <Label Content="Вот тут у нас строят движок стима но пока не строят а ток загадывают*картинка в процессе загрузки*" Margin="0,3,0.2,-3.6" />
+            </TabItem>
+            <TabItem Header="Поддержка ОС">
+                <Label Content="Тут у нас крч что стим поддерживает*картинка в процессе загрузки*" />
+
+            </TabItem>
+            <TabItem Header="Собственная ОС">
+                <Label Content="Тут у нас про SteamOS которую юзает только Deck*картинка в процессе загрузки*" />
+            </TabItem>
+            <TabItem Header="Steam Awards">
+                <Label Content="А тут про номинацию и как она появилась*картинка в процессе загрузки*" />
+            </TabItem>
+
+        </TabControl>
+
 
     </Grid>
 </Window>

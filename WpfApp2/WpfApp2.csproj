@@ -36,6 +36,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -54,6 +56,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="HelpPage.xaml.cs">
+      <DependentUpon>HelpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="statistica.cs" />
+    <Compile Include="Timer.cs" />
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
@@ -69,9 +76,6 @@
     <Compile Include="Window2%28Story%29.xaml.cs">
       <DependentUpon>Window2%28Story%29.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Window2.xaml.cs">
-      <DependentUpon>Window2.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Window3%28Steam%29.xaml.cs">
       <DependentUpon>Window3%28Steam%29.xaml</DependentUpon>
     </Compile>
@@ -81,6 +85,14 @@
     <Compile Include="Window5%28corp%29.xaml.cs">
       <DependentUpon>Window5%28corp%29.xaml</DependentUpon>
     </Compile>
+    <Page Include="DayTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HelpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -93,6 +105,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="NightTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -110,10 +126,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Window2%28Story%29.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Window2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -157,7 +169,106 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="047fee8f5a205fa22489029fd6c0ee39.jpg" />
+    <None Include="Media\game_intro.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Media\Cen_Logo.jpg" />
+    <Resource Include="Media\CS_Logo.jpg" />
+    <Resource Include="Media\Dota_Logo.jpg" />
+    <Resource Include="Media\Story_Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Media\deck_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Media\link_button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Media\index_button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Media\cont_Button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Media\device_intro.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Media\zvuk.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Media\st_map_.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Media\as_map_.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Media\dota_map_.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Media\wow_map.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Media\cscz.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Media\csgo.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Media\cshl.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Media\css.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Media\comp_intro.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Media\steam_into.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Media\portal.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Media\l4d.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Media\dop.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Media\HL1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Media\dop_post.jpg" />
+    <Resource Include="Media\hl_post.jpg" />
+    <Resource Include="Media\l4d_post.jpg" />
+    <Resource Include="Media\portal_post.jpg" />
+    <None Include="Media\contr_intro.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Media\index_intro.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Media\link_intro.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Media\Main_Background1.jpg" />
+    <Resource Include="Media\Main_Background2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,18 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="Window5_corp_" Height="550" Width="1000">
-    <Grid>
-        <Button Content="Штаб" HorizontalAlignment="Left" VerticalAlignment="Top" Width="133" Margin="28,85,0,0" Height="56"/>
-        <Button Content="Заслуги" HorizontalAlignment="Left" VerticalAlignment="Top" Width="133" Margin="274,85,0,0" Height="56" Click="Button_Click"/>
-        <Button Content="Ивенты" HorizontalAlignment="Left" VerticalAlignment="Top" Width="133" Margin="567,85,0,0" Height="56"/>
-        <Button Content="Финансовое положение " HorizontalAlignment="Left" VerticalAlignment="Top" Width="133" Margin="827,85,0,0" Height="56"/>
-        <WebBrowser HorizontalAlignment="Left" Height="324" VerticalAlignment="Top" Width="932" Margin="28,172,0,0"/>
-        <Button Content="VALVE CO" HorizontalAlignment="Left" VerticalAlignment="Top" Width="190" Height="49" Margin="390,10,0,0" FontSize="36" BorderThickness="10,1">
-            <Button.Effect>
-                <BlurEffect RenderingBias="Quality" Radius="4" KernelType="Box"/>
-            </Button.Effect>
-        </Button>
+        Title="Window5_corp_" Height="714" Width="1519" WindowStyle="None" PreviewKeyDown="Window_PreviewKeyDown"
+        
+        >
+    <Window.Background>
+        <ImageBrush Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid Style="{DynamicResource GridStyle}">
+        <Button x:Name="return_Button" Style="{DynamicResource ButtonStyle1}" Content="На главную" HorizontalAlignment="Left" VerticalAlignment="Top" Width="208" Margin="640,625,0,0" Height="72" FontSize="36"  Foreground="#FFC7FF65" Click="return_Button_Click"/>
+        <Label Content="Valve CO." HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="661,10,0,0" Background="#FFFF7373" Foreground="#FFC7FF65"/>
+        
+        <TabControl x:Name="MyTabControl" Margin="0,73,-0.2,82.2">
+            <TabItem Header="Штаб" RenderTransformOrigin="0.5,0.509">
+                <Label Content="Вот тут у нас строят движок стима но пока не строят а ток загадывают*картинка в процессе загрузки*" />
+            </TabItem>
+            <TabItem Header="Заслуги">
+                <Label Content="Тут у нас крч что стим поддерживает*картинка в процессе загрузки*" />
+
+            </TabItem>
+            <TabItem Header="Ивенты">
+                <Label Content="Тут у нас про SteamOS которую юзает только Deck*картинка в процессе загрузки*" />
+            </TabItem>
+            <TabItem Header="Финансовое положение">
+                <Label Content="А тут про номинацию и как она появилась*картинка в процессе загрузки*" />
+            </TabItem>
+            
+        </TabControl>
 
     </Grid>
 </Window>

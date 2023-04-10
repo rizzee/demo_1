@@ -5,16 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="Window2_CS_" Height="450" Width="800">
-    <Grid>
-        <Button Content="Counter Strike" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170                 " Height="30                 " Margin="36,92,0,0" Click="Button_Click"/>
-        <Button Content="Counter Strike:&#xD;&#xA;Conditional Zero" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170                 " Height="30                 " Margin="36,155,0,0" FontSize="10"/>
-        <Button Content="Counter Strike: Source" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170                 " Height="30                 " Margin="36,218,0,0"/>
-        <Button Content="CS:GO" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170                 " Height="30                 " Margin="36,283,0,0"/>
-        <Label Content="Counter Strike" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="320,10,0,0" FontSize="20"/>
-        <MediaElement HorizontalAlignment="Left" Height="221" VerticalAlignment="Top" Width="422" Margin="349,92,0,0"/>
-        <Button Content="На главную" HorizontalAlignment="Left" Height="34" Margin="10,376,0,0" VerticalAlignment="Top" Width="147"/>
-        <Button Content="След." HorizontalAlignment="Left" Height="34" Margin="637,376,0,0" VerticalAlignment="Top" Width="147"/>
+        Title="Window2_CS_" Height="714" Width="1519" WindowStyle="None" PreviewKeyDown="Window_PreviewKeyDown" Background="White"
+       
+        >
+    <Grid Style="{DynamicResource GridStyle}">
+        <Button x:Name="cs1_Button" Style="{DynamicResource ButtonStyle1}" Content="Counter Strike" HorizontalAlignment="Left" VerticalAlignment="Top" Width="439" Height="46" Margin="43,135,0,0" Click="cs1_Button_Click" FontSize="36" Foreground="#FFFFEE00">
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="csz_Button" Style="{DynamicResource ButtonStyle1}" Content="CS:Conditional Zero" HorizontalAlignment="Left" VerticalAlignment="Top" Width="439" Height="46" Margin="43,241,0,0" FontSize="36" Foreground="#FFFFEE00" Click="csz_Button_Click">
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="css_Button" Style="{DynamicResource ButtonStyle1}" Content="Counter Strike: Source" HorizontalAlignment="Left" VerticalAlignment="Top" Width="439" Height="46" Margin="43,337,0,0" FontSize="36" Foreground="#FFFFEE00" Click="css_Button_Click">
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="csgo_Button" Style="{DynamicResource ButtonStyle1}" Content="CS:GO" HorizontalAlignment="Left" VerticalAlignment="Top" Width="439" Height="46" Margin="43,437,0,0" FontSize="36" Foreground="#FFFFEE00" Click="csgo_Button_Click">
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Label Content="Counter Strike" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="617,10,0,0" FontSize="36" Background="#FFFF78F6" Foreground="#FF00FFD6"/>
+        <MediaElement x:Name="player" HorizontalAlignment="Left" Height="328" VerticalAlignment="Top" Width="688" Margin="815,155,0,0" LoadedBehavior="Manual" />
+        <Button x:Name="return_Button" Style="{DynamicResource ButtonStyle1}" Content="Назад" HorizontalAlignment="Left" Height="68" Margin="550,606,0,0" VerticalAlignment="Top" Width="392" FontSize="36" Foreground="#FF00FFD6" BorderBrush="#FFFF78F6" Background="#FFFF78F6" Click="return_Button_Click"/>
 
     </Grid>
 </Window>

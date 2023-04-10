@@ -5,18 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="Window2_dota_" Height="450" Width="800">
-    <Grid>
-        <Button Content="Star Craft" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170
-                " Height="30
-                " Margin="36,92,0,0"/>
-        <Button Content="World Of Warcraft 3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170                 " Height="30                 " Margin="36,155,0,0"/>
-        <Button Content="AllStars" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170                 " Height="30                 " Margin="36,218,0,0"/>
-        <Button Content="Dota 2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170                 " Height="30                 " Margin="36,283,0,0"/>
-        <Label Content="Defens Of The Ancients" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="276,10,0,0" FontSize="20"/>
-        <MediaElement HorizontalAlignment="Left" Height="221" VerticalAlignment="Top" Width="422" Margin="349,92,0,0"/>
-        <Button Content="На главную" HorizontalAlignment="Left" Height="34" Margin="10,376,0,0" VerticalAlignment="Top" Width="147"/>
-        <Button Content="След." HorizontalAlignment="Left" Height="34" Margin="637,376,0,0" VerticalAlignment="Top" Width="147"/>
+        Title="Window2_dota_" Height="714" Width="1519" WindowStyle="None" PreviewKeyDown="Window_PreviewKeyDown" Background="White"
+         
+        >
+    <Grid Style="{DynamicResource GridStyle}">
+        <Button x:Name="st_Button" Style="{DynamicResource ButtonStyle1}" Content="StarCraft" HorizontalAlignment="Left" VerticalAlignment="Top" Width="681" Height="52" Margin="38,128,0,0" FontSize="36" Foreground="Black" Background="#FF93FFAC" Click="st_Button_Click"/>
+        <Button x:Name="wow_Button" Style="{DynamicResource ButtonStyle1}" Content="Warcraft 3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="681" Height="50" Margin="38,236,0,0" FontSize="36" Background="#FF93FFAC" Click="wow_Button_Click"/>
+        <Button x:Name="as_Button" Style="{DynamicResource ButtonStyle1}" Content="AllStars" HorizontalAlignment="Left" VerticalAlignment="Top" Width="681" Height="51" Margin="38,343,0,0" FontSize="36" Background="#FF93FFAC" Click="as_Button_Click"/>
+        <Button x:Name="dota_Button" Style="{DynamicResource ButtonStyle1}" Content="Dota 2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="681" Height="52" Margin="38,453,0,0" FontSize="36" Background="#FF93FFAC" Click="dota_Button_Click"/>
+        <Label Content="Defens Of The Ancients" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="584,10,0,0" FontSize="36" Height="57" Width="386" Background="#FF93FFAC"/>
+        <MediaElement x:Name="player" HorizontalAlignment="Left" Height="377" VerticalAlignment="Top" Width="708" Margin="795,128,0,0" LoadedBehavior="Manual"/>
+        <Button x:Name="rerurnButton" Style="{DynamicResource ButtonStyle1}" Content="Назад" HorizontalAlignment="Left" Height="54" Margin="584,620,0,0" VerticalAlignment="Top" Width="386" FontSize="36" Background="#FF93FFAC" Click="returnButton_Click"/>
 
     </Grid>
 </Window>

@@ -5,20 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="Window4_razrab_" Height="650
-        " Width="700
-        
-        ">
-    <Grid>
-        <Button Content="Steam Deck" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="140
-                " Margin="93,66,0,0"/>
-        <Button Content="Steam Link" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="140                 " Margin="431,66,0,0"/>
-        <Button Content="Valve Index" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="140                 " Margin="93,244,0,0"/>
-        <Button Content="Steam Controller" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="140                 " Margin="431,244,0,0"/>
-        <MediaElement HorizontalAlignment="Left" Height="209" VerticalAlignment="Top" Width="508" Margin="93,401,0,0"/>
-        <Label Content="Разработанные устройства" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Margin="196,10,0,0"/>
-        <Button Content="На главную" HorizontalAlignment="Left" Height="155" Margin="10,414,0,0" VerticalAlignment="Top" Width="78"/>
-        <Button Content="След" HorizontalAlignment="Left" Height="155" Margin="606,414,0,0" VerticalAlignment="Top" Width="78"/>
+        Title="Window4_razrab_" Height="714" Width="1519" PreviewKeyDown="Window_PreviewKeyDown" Background="White"
+         
+        >
+    <Grid Style="{DynamicResource GridStyle}">
+        <Button x:Name="dec_Button" Content="Steam Deck" HorizontalAlignment="Left" VerticalAlignment="Top" Width="214" Height="179" Margin="71,106,0,0" Foreground="#FF9E62FF" FontSize="36" Click="dec_Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Media/deck_button.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="link_Button" Content="Steam Link" HorizontalAlignment="Left" VerticalAlignment="Top" Width="214" Height="179" Margin="427,106,0,0" Foreground="#FF9E62FF" FontSize="36" Click="link_Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Media/link_button.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="vi_Button" Content="Valve Index" HorizontalAlignment="Left" VerticalAlignment="Top" Width="214" Height="180" Margin="71,337,0,0" FontSize="36" Foreground="#FF9E62FF" Click="vi_Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Media/index_button.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="st_Button" Content="Steam Controller" HorizontalAlignment="Left" VerticalAlignment="Top" Width="214" Height="180" Margin="427,337,0,0" Foreground="#FF9E62FF" FontSize="24" Click="st_Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Media/cont_Button.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <MediaElement x:Name="player" HorizontalAlignment="Left" Height="411" VerticalAlignment="Top" Width="738" Margin="765,106,0,0" LoadedBehavior="Manual"/>
+        <Label Content="Разработанные устройства" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="524,10,0,0" Background="#FFFF7B7B" Foreground="#FFFFE38D"/>
+        <Button x:Name="return_Button" Style="{DynamicResource ButtonStyle1}" Content="На главную" HorizontalAlignment="Left" VerticalAlignment="Top" Width="401" Margin="553,616,0,0" Height="58" Foreground="#FFFFE38D" Background="#FFFF7B7B" FontSize="36" Click="return_Button_Click"/>
 
     </Grid>
 </Window>

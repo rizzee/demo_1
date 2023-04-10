@@ -5,16 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="Window2_censored_" Height="450" Width="800">
-    <Grid>
-        <Label Content="Невышедшие/В разработке" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Margin="224,0,0,0"/>
-        <Image HorizontalAlignment="Left" Height="350" VerticalAlignment="Top" Width="270" Margin="10,42,0,0"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="357" Margin="358,57,0,0"/>
-        <Label Content="Место под информацию" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="333,121,0,0" FontSize="36"/>
-        <Label Content="Место под информацию" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="333,184,0,0" FontSize="36"/>
-        <Label Content="Место под информацию" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="333,242,0,0" FontSize="36"/>
-        <Button Content="На главную" HorizontalAlignment="Left" Height="34" Margin="358,376,0,0" VerticalAlignment="Top" Width="147"/>
-        <Button Content="След." HorizontalAlignment="Left" Height="34" Margin="637,376,0,0" VerticalAlignment="Top" Width="147"/>
+        Title="Window2_censored_" Height="714" Width="1519" WindowStyle="None"
+        Closed="Window_Closed" PreviewKeyDown="Window_PreviewKeyDown" Background="White"
+        >
+
+    <Grid Style="{DynamicResource GridStyle}">
+    <Label Content="Невышедшие/В разработке" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="534,0,0,0" Background="#FFC4B051"/>
+        <Image HorizontalAlignment="Left" Height="553" VerticalAlignment="Top" Width="467" Margin="83,63,0,0"/>
+        <ComboBox x:Name="list" HorizontalAlignment="Left" VerticalAlignment="Top" Width="647" Margin="787,97,0,0" Height="46"/>
+        <Button x:Name="return_Button" Style="{DynamicResource ButtonStyle1}" Content="Назад" HorizontalAlignment="Left" Height="55" Margin="578,619,0,0" VerticalAlignment="Top" Width="372" Background="#FFC4B051" FontSize="36" Click="return_Button_Click"/>
 
     </Grid>
 </Window>

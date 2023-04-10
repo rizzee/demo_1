@@ -5,15 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
-    <Grid>
-        <Label Content="Список игр компании" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Margin="265,10,0,0"/>
-        <Button Content="Сюжетные проекты" HorizontalAlignment="Left" VerticalAlignment="Top" Width="198" Margin="23,61,0,0" Height="295"/>
-        <Button Content="DOTA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="198" Margin="293,61,0,0" Height="295"/>
-        <Button Content="Counter-Strike" HorizontalAlignment="Left" VerticalAlignment="Top" Width="198" Margin="561,61,0,0" Height="295"/>
-        <Button Content="На главную" HorizontalAlignment="Left" Height="33" Margin="23,377,0,0" VerticalAlignment="Top" Width="198"/>
-        <Button Content="Следующее окно" HorizontalAlignment="Left" Height="33" Margin="561,377,0,0" VerticalAlignment="Top" Width="198"/>
-        <Button Content="Невышедшие проекты" HorizontalAlignment="Left" Height="49" Margin="293,369,0,0" VerticalAlignment="Top" Width="198"/>
+        Title="Window1" Height="714" Width="1519" WindowStyle="None" PreviewKeyDown="Window_PreviewKeyDown" Closing="Window_Closing" Background="White"
+        >
+    <Grid Style="{DynamicResource GridStyle}">
+        <Label Content="Список игр компании" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="50" Margin="490,10,0,0" Background="#FFCBA1FD" Foreground="White"/>
+        <Button x:Name="storyButton" Content="Сюжетные проекты" HorizontalAlignment="Left" VerticalAlignment="Top" Width="253" Height="444" Margin="80,103,0,0" BorderBrush="White" FontSize="24" Foreground="White" FontStyle="Italic" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Media/Story_Logo.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="dotaButton"  Content="DOTA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="253" Height="444" Margin="459,103,0,0" FontSize="24" FontStyle="Italic" Foreground="White" Click="dotaButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Media/Dota_Logo.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="cs_Button" Content="Counter-Strike" HorizontalAlignment="Left" VerticalAlignment="Top" Width="253" Height="444" Margin="780,103,0,0" FontSize="24" FontStyle="Italic" Foreground="White" Click="cs_Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Media/CS_Logo.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="cen_Button"  Content="Не вышедшие " HorizontalAlignment="Left" VerticalAlignment="Top" Width="253" Height="444" Margin="1159,103,0,0" FontSize="24" FontStyle="Italic" Foreground="White" Click="cen_Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Media/Cen_Logo.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="homeButton" Style="{DynamicResource ButtonStyle1}" Content="На главную" HorizontalAlignment="Left" VerticalAlignment="Top" Width="260" Height="60" Margin="621,624,0,0" Click="homeButton_Click" FontSize="36" Foreground="White" Background="#FFCBA1FD" BorderBrush="#FF6E6E6E"/>
 
     </Grid>
 </Window>
